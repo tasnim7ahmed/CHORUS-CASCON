@@ -15,7 +15,7 @@ CHORUS is a RAG-based system that bridges natural language and optimization code
 - **Expert prompting** with structured output for reliable code generation
 - **Safe execution** with timeout protection for validation
 
-**Performance**: 50-65% accuracy on NL4OPT benchmark (289 optimization problems)
+**Performance**: 50-65% accuracy on NL4Opt benchmark (289 optimization problems)
 
 ---
 
@@ -32,7 +32,6 @@ CHORUS is a RAG-based system that bridges natural language and optimization code
 
 **1. Run the setup script:**
 ```bash
-cd Standalone
 ./setup.sh
 ```
 
@@ -181,7 +180,7 @@ EXECUTION_TIMEOUT = 120  # Seconds per problem
 
 ## Dataset
 
-The tutorial uses **NL4OPT-2025**, a benchmark dataset of 289 linear/integer programming problems:
+The tutorial uses **[NL4Opt](https://proceedings.mlr.press/v220/ramamonjison23a.html)**, a benchmark dataset of 289 linear/integer programming problems:
 - Natural language problem descriptions
 - Ground truth Gurobi code solutions
 - Expected objective values for evaluation
@@ -193,55 +192,6 @@ The tutorial uses **NL4OPT-2025**, a benchmark dataset of 289 linear/integer pro
 problem_id,question,expected_objective
 0,"A fishery wants to transport...",3000.0
 1,"An office supply company...",5050.0
-```
-
----
-
-## Troubleshooting
-
-### Conda not found
-```bash
-# Initialize conda in your shell
-conda init bash  # or zsh
-source ~/.bashrc  # or ~/.zshrc
-```
-
-### FAISS import error (Linux)
-```bash
-# Install libgomp
-sudo apt-get update
-sudo apt-get install libgomp1
-```
-
-### Gurobi license error
-```bash
-# Check license file exists
-ls -la ~/gurobi.lic
-
-# Activate license
-grbgetkey YOUR-LICENSE-KEY
-
-# Verify
-gurobi_cl --license
-```
-
-### Jupyter kernel not found
-```bash
-# Re-register kernel
-conda activate chorus-tutorial
-python -m ipykernel install --user --name chorus-tutorial --display-name "CHORUS Tutorial"
-
-# Restart Jupyter
-jupyter lab
-```
-
-### OpenRouter API error
-```bash
-# Verify API key in test.env
-cat test.env | grep OPENROUTER_API_KEY
-
-# Key should start with 'sk-or-'
-# Get new key from: https://openrouter.ai/keys
 ```
 
 ---
@@ -285,7 +235,7 @@ If you use CHORUS in your research, please cite:
 - **HuggingFace**: Embedding models and transformers
 - **LangChain**: RAG framework utilities
 - **FAISS**: Similarity search
-- **NL4OPT**: Benchmark dataset
+- **NL4Opt**: [Benchmark dataset](https://proceedings.mlr.press/v220/ramamonjison23a.html)
 
 ---
 
