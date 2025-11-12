@@ -77,15 +77,7 @@ tutorial_summary.txt
 # Stage output logs (optional)
 stage*_output.txt
 
-# =============================================================================
-# Documentation & Data (Large Files)
-# =============================================================================
 
-# PDF Documentation (large files - should be downloaded separately)
-docs/
-*.pdf
-
-# Dataset - TRACKED (needed for tutorial)
 # test_data.csv is included in repo
 !test_data.csv
 
