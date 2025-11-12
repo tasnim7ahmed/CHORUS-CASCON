@@ -1,0 +1,280 @@
+# CHORUS Tutorial - Git Ignore File
+
+# =============================================================================
+# Python
+# =============================================================================
+*.py[cod]
+*$py.class
+*.so
+__pycache__/
+*.egg
+*.egg-info/
+dist/
+build/
+eggs/
+.eggs/
+lib/
+lib64/
+parts/
+sdist/
+var/
+wheels/
+pip-wheel-metadata/
+share/python-wheels/
+*.manifest
+*.spec
+
+# =============================================================================
+# Jupyter Notebook
+# =============================================================================
+.ipynb_checkpoints/
+*/.ipynb_checkpoints/*
+*.ipynb_checkpoints
+
+# Jupyter Notebook outputs (optional - uncomment if you want clean notebooks)
+# *-checkpoint.ipynb
+
+# =============================================================================
+# Environment & Configuration
+# =============================================================================
+.env
+.env.local
+.env.*.local
+*.env
+test.env  # Personal environment file with actual API keys (never push)
+
+# Virtual Environments
+venv/
+ENV/
+env/
+.venv
+env.bak/
+venv.bak/
+
+# Conda
+conda-meta/
+.conda/
+
+# =============================================================================
+# Tutorial Output Files (Generated Data)
+# =============================================================================
+
+# Pickle files (intermediate results)
+tutorial_chunks_doc.pkl
+tutorial_chunks_code.pkl
+tutorial_keywords.pkl
+tutorial_retrievals.pkl
+tutorial_generated_code.pkl
+
+# FAISS Vector Stores
+tutorial_vectorstore_save/
+tutorial_code_save/
+
+# Results & Summaries
+tutorial_results.csv
+tutorial_summary.txt
+
+# Stage output logs (optional)
+stage*_output.txt
+
+# =============================================================================
+# Documentation & Data (Large Files)
+# =============================================================================
+
+# PDF Documentation (large files - should be downloaded separately)
+docs/
+*.pdf
+
+# Dataset - TRACKED (needed for tutorial)
+# test_data.csv is included in repo
+!test_data.csv
+
+# =============================================================================
+# Gurobi
+# =============================================================================
+
+# Gurobi license files
+gurobi.lic
+*.lic
+
+# Gurobi logs
+gurobi.log
+*.log
+
+# Gurobi solution files
+*.sol
+*.mst
+*.mps
+*.lp
+*.rlp
+*.ilp
+
+# =============================================================================
+# IDE & Editor
+# =============================================================================
+
+# VS Code
+.vscode/
+*.code-workspace
+
+# PyCharm
+.idea/
+*.iml
+*.ipr
+*.iws
+
+# Sublime Text
+*.sublime-project
+*.sublime-workspace
+
+# Vim
+*.swp
+*.swo
+*~
+
+# Emacs
+*~
+\#*\#
+.\#*
+
+# =============================================================================
+# Operating System
+# =============================================================================
+
+# macOS
+.DS_Store
+.AppleDouble
+.LSOverride
+._*
+.Spotlight-V100
+.Trashes
+
+# Windows
+Thumbs.db
+Thumbs.db:encryptable
+ehthumbs.db
+ehthumbs_vista.db
+*.stackdump
+[Dd]esktop.ini
+$RECYCLE.BIN/
+*.lnk
+
+# Linux
+*~
+.directory
+.Trash-*
+
+# =============================================================================
+# Testing & Coverage
+# =============================================================================
+.pytest_cache/
+.coverage
+.coverage.*
+htmlcov/
+.tox/
+.nox/
+coverage.xml
+*.cover
+.hypothesis/
+nosetests.xml
+
+# =============================================================================
+# Documentation
+# =============================================================================
+docs/_build/
+site/
+.mkdocs/
+
+# Sphinx
+docs/_build/
+docs/_static/
+docs/_templates/
+
+# =============================================================================
+# Temporary Files
+# =============================================================================
+*.tmp
+*.temp
+*.bak
+*.backup
+*.cache
+
+# =============================================================================
+# Model Caches (HuggingFace, etc.)
+# =============================================================================
+.cache/
+transformers_cache/
+sentence_transformers/
+
+# HuggingFace model cache (optional - uncomment to ignore cached models)
+# ~/.cache/huggingface/
+
+# =============================================================================
+# Experimental / Development
+# =============================================================================
+
+# Experimental notebooks
+experiments/
+scratch/
+dev/
+playground/
+
+# Old versions
+*.old
+old/
+archive/
+
+# =============================================================================
+# Git & Version Control
+# =============================================================================
+.git/
+.gitattributes
+
+# =============================================================================
+# Database
+# =============================================================================
+*.db
+*.sqlite
+*.sqlite3
+
+# =============================================================================
+# Compressed Files
+# =============================================================================
+*.zip
+*.tar
+*.tar.gz
+*.tgz
+*.rar
+*.7z
+
+# =============================================================================
+# Custom Project Files
+# =============================================================================
+
+# Presentation files (optional - uncomment if you don't want to track)
+# *.tex
+# *.aux
+# *.out
+# *.synctex.gz
+
+# Tutorial complete marker
+TUTORIAL_COMPLETE.txt
+
+# =============================================================================
+# Exceptions (Files to Include Despite Patterns Above)
+# =============================================================================
+
+# Include example .env template
+!.env.example
+!.env.template
+
+# Include requirements files
+!requirements*.txt
+
+# Include sample data (if small)
+!sample_data.csv
+
+# Include README and documentation
+!README.md
+!QUICKSTART.md
+!LICENSE
