@@ -1,4 +1,4 @@
-# CHORUS: Hierarchical RAG for Mathematical Optimization Code Generation
+# CHORUS: Automating Linear Programming Code Generation from Natural Language
 
 A Jupyter notebook tutorial implementing the CHORUS framework, a Retrieval-Augmented Generation (RAG) system that generates executable Gurobi optimization code from natural language problem descriptions.
 
